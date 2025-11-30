@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class p{
+  public static void main(String args[]){
+    Rectangle r1 = new Rectangle();
+    r1.area(4, 5);
+    r1.perimeter(4,5);
+    r1.printInfo();
+  }
+}
+class Rectangle{
+  int length;
+  int width;
+  int Area;
+  int Perimeter;
+  
+  void area(int length, int width){
+    Area = length * width;
+  }
+  void perimeter(int length, int width){
+    Perimeter = 2 *(length + width);
+  }
+  void printInfo(){
+    System.out.println("Area :"+ Area);
+    System.out.println("Perimeter : "+ Perimeter);
+  }
+}

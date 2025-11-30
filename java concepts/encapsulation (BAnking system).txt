@@ -1,0 +1,52 @@
+import java.util.*;
+
+class main{
+  public static void main(String args[]){
+    Bank b1 = new Bank();
+    b1.setAccNO(232323);
+    System.out.println("Account number : "+ b1.getAccNo());
+    b1.setBankBal(0);
+    b1.deposit(500);
+    b1.withdraw(200);
+    
+    System.out.println("bank balance : "+ b1.getBankBal());
+  }
+}
+class Bank{
+  private int BankAccNO;
+  private int BankBal;
+  
+  public void setAccNO(int BankAccNO){
+    this.BankAccNO = BankAccNO;
+  }
+  public void setBankBal(int BankBal){
+    this.BankBal = BankBal;
+  }
+  
+  public void deposit(int amount){
+    if(amount>0){
+      BankBal += amount;
+      System.out.println("deposited amount : "+ amount);
+    }else{
+      System.out.println("invalid deposit money");
+    }
+  }
+  
+  public void withdraw(int amount){
+    if(amount > 0 && amount <= BankBal){
+      BankBal -= amount;
+      System.out.println("withdrew amount : "+ amount);
+    }
+    else{
+      System.out.println("Invalid withdraw");
+    }
+  }
+  
+  public int getAccNo(){
+    return this.BankAccNO;
+  }
+  public int getBankBal(){
+    return this.BankBal;
+  }
+  
+}

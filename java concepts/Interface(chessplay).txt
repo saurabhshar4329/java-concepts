@@ -1,0 +1,28 @@
+import java.util.*;
+
+class main{
+  public static void main(String args[]){
+    queen q = new queen();
+    q.moves();
+  }
+}
+interface chessplay{
+  void moves();
+  
+}
+
+class queen implements chessplay{
+  public void moves(){
+    System.out.println("up, down, lefr, right, diagonal(in all directions)");
+  }
+}
+class hook implements chessplay{
+  public void moves(){
+    System.out.println("up, down, lefr, right,(in all 4 directions");
+  }
+}
+class king implements chessplay{
+  public void moves(){
+    System.out.println("up, down, lefr, right, diagonal(in all directions by 1 step");
+  }
+}
